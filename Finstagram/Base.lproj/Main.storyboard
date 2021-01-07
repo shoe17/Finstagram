@@ -19,18 +19,17 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="234" translatesAutoresizingMaskIntoConstraints="NO" id="08b-O5-IgS" userLabel="Header">
                                 <rect key="frame" x="10" y="54" width="394" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B2r-1c-OG9">
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B2r-1c-OG9">
                                         <rect key="frame" x="0.0" y="0.0" width="94" height="50"/>
                                         <state key="normal" title="Finstagram"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1g-WZ-khc">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1g-WZ-khc">
                                         <rect key="frame" x="328" y="0.0" width="66" height="50"/>
                                         <state key="normal" title="New Post"/>
                                     </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="hRQ-pW-Too"/>
-                                    <constraint firstAttribute="width" constant="377" id="mAh-yg-90D"/>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="265" translatesAutoresizingMaskIntoConstraints="NO" id="YjH-wq-Pkm" userLabel="Footer">
@@ -63,7 +62,7 @@
                             <constraint firstItem="08b-O5-IgS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="6c8-MK-Qin"/>
                             <constraint firstItem="08b-O5-IgS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="NFB-fZ-S8O"/>
                             <constraint firstItem="1yP-Cg-MzC" firstAttribute="top" secondItem="08b-O5-IgS" secondAttribute="bottom" id="ZYt-Ui-2dA"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="08b-O5-IgS" secondAttribute="trailing" constant="10" id="fpp-8M-aqV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="08b-O5-IgS" secondAttribute="trailingMargin" constant="10" id="fpp-8M-aqV"/>
                             <constraint firstItem="YjH-wq-Pkm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="gPZ-Hu-1Zb"/>
                             <constraint firstItem="1yP-Cg-MzC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="rkE-ld-vuc"/>
                             <constraint firstAttribute="bottomMargin" secondItem="YjH-wq-Pkm" secondAttribute="bottom" constant="5" id="soW-5P-4EB"/>
