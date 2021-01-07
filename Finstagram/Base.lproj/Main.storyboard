@@ -21,15 +21,11 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B2r-1c-OG9">
                                         <rect key="frame" x="0.0" y="0.0" width="94" height="50"/>
-                                        <state key="normal" title="Finstagram">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
+                                        <state key="normal" title="Finstagram"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1g-WZ-khc">
                                         <rect key="frame" x="328" y="0.0" width="66" height="50"/>
-                                        <state key="normal" title="New Post">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
+                                        <state key="normal" title="New Post"/>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -38,40 +34,39 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="265" translatesAutoresizingMaskIntoConstraints="NO" id="YjH-wq-Pkm" userLabel="Footer">
-                                <rect key="frame" x="10" y="802" width="394" height="50"/>
+                                <rect key="frame" x="10" y="807" width="394" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIR-0X-2GC">
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIR-0X-2GC">
                                         <rect key="frame" x="0.0" y="0.0" width="85" height="50"/>
-                                        <state key="normal" title="Home">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
+                                        <state key="normal" title="Home"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FyW-OC-kzF">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FyW-OC-kzF">
                                         <rect key="frame" x="350" y="0.0" width="44" height="50"/>
-                                        <state key="normal" title="Profile">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
+                                        <state key="normal" title="Profile"/>
                                     </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="pNV-GA-IgU"/>
                                 </constraints>
                             </stackView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1yP-Cg-MzC">
-                                <rect key="frame" x="10" y="161" width="394" height="633"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1yP-Cg-MzC">
+                                <rect key="frame" x="5" y="104" width="404" height="703"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YjH-wq-Pkm" secondAttribute="trailing" constant="10" id="0rr-Rr-JW3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1yP-Cg-MzC" secondAttribute="trailing" constant="5" id="2yP-rF-1F0"/>
+                            <constraint firstItem="YjH-wq-Pkm" firstAttribute="top" secondItem="1yP-Cg-MzC" secondAttribute="bottom" id="4A9-0i-iZ9"/>
                             <constraint firstItem="08b-O5-IgS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="6c8-MK-Qin"/>
                             <constraint firstItem="08b-O5-IgS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="NFB-fZ-S8O"/>
+                            <constraint firstItem="1yP-Cg-MzC" firstAttribute="top" secondItem="08b-O5-IgS" secondAttribute="bottom" id="ZYt-Ui-2dA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="08b-O5-IgS" secondAttribute="trailing" constant="10" id="fpp-8M-aqV"/>
                             <constraint firstItem="YjH-wq-Pkm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="gPZ-Hu-1Zb"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="YjH-wq-Pkm" secondAttribute="bottom" constant="10" id="soW-5P-4EB"/>
+                            <constraint firstItem="1yP-Cg-MzC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="rkE-ld-vuc"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="YjH-wq-Pkm" secondAttribute="bottom" constant="5" id="soW-5P-4EB"/>
                         </constraints>
                     </view>
                 </viewController>
