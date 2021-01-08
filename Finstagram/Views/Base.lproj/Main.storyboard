@@ -48,7 +48,7 @@
                                     <constraint firstAttribute="height" constant="50" id="pNV-GA-IgU"/>
                                 </constraints>
                             </stackView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1yP-Cg-MzC">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="600" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1yP-Cg-MzC">
                                 <rect key="frame" x="5" y="104" width="404" height="703"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
@@ -68,10 +68,13 @@
                             <constraint firstAttribute="bottomMargin" secondItem="YjH-wq-Pkm" secondAttribute="bottom" constant="5" id="soW-5P-4EB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="postTableView" destination="1yP-Cg-MzC" id="BKU-Ui-8O5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="13.043478260869566" y="89.732142857142847"/>
+            <point key="canvasLocation" x="11.594202898550726" y="89.0625"/>
         </scene>
     </scenes>
     <resources>
