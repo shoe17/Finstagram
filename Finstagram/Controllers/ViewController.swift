@@ -11,9 +11,9 @@ class ViewController: UIViewController {
     @IBOutlet var postTableView: UITableView!
     
     var posts = [
-        Post(username: "darianlow", subtitle: "Hawaii"),
-        Post(username: "dionlow", subtitle: "Hawaii"),
-        Post(username: "ericcao", subtitle: "Iowa"),
+        Post(username: "darianlow", subtitle: "Hawaii", profilePic: #imageLiteral(resourceName: "profile_pic")),
+        Post(username: "dionlow", subtitle: "Hawaii", profilePic: #imageLiteral(resourceName: "profile_pic")),
+        Post(username: "ericcao", subtitle: "Iowa", profilePic: #imageLiteral(resourceName: "profile_pic")),
     ]
     
     override func viewDidLoad() {
@@ -34,6 +34,9 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = postTableView.dequeueReusableCell(withIdentifier: "PostReusableCell", for: indexPath) as! PostCell
         cell.username.text = posts[indexPath.row].username
+        cell.subtitle.text = posts[indexPath.row].subtitle
+        cell.profileImage.image = posts[indexPath.row].profilePic
+        
         return cell
     }
 }

@@ -5,9 +5,10 @@
 //  Created by Darian Low on 1/8/21.
 //
 
-import Foundation
+import UIKit
 
 struct Post {
     let username: String
     let subtitle: String
+    let profilePic: UIImage
 }
