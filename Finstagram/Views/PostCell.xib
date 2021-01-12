@@ -28,7 +28,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="zTK-0o-0bc">
-                                <rect key="frame" x="58" y="0.0" width="240.5" height="50"/>
+                                <rect key="frame" x="58" y="0.0" width="305" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ne0-fQ-bBa">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="25.5"/>
@@ -51,10 +51,16 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zp7-GY-XLz">
-                                <rect key="frame" x="306.5" y="0.0" width="164.5" height="50"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="371" y="0.0" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="xCp-Wr-pbj"/>
+                                </constraints>
+                                <state key="normal" title="Options"/>
                             </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zp7-GY-XLz" secondAttribute="trailing" id="Nuv-bP-UUO"/>
+                        </constraints>
                     </stackView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L8w-Gs-bhO">
                         <rect key="frame" x="0.0" y="58" width="471" height="471"/>
