@@ -23,5 +23,15 @@ class HomeViewController: UIViewController {
         postTableView.delegate = postDelegate
         postTableView.register(UINib(nibName: "PostCell", bundle: nil), forCellReuseIdentifier: "PostReusableCell")
     }
+    
+    @IBAction func toNewPostView(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "goToNewPostView", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToNewPostView" {
+            
+        }
+    }
 }
 

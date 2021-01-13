@@ -27,6 +27,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1g-WZ-khc">
                                         <rect key="frame" x="328" y="0.0" width="66" height="50"/>
                                         <state key="normal" title="New Post"/>
+                                        <connections>
+                                            <action selector="toNewPostView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AJc-PW-mED"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -71,28 +74,29 @@
                     </view>
                     <connections>
                         <outlet property="postTableView" destination="1yP-Cg-MzC" id="BKU-Ui-8O5"/>
+                        <segue destination="7Jc-cG-Shm" kind="show" identifier="goToNewPostView" id="yyh-Ac-bOY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11.594202898550726" y="89.0625"/>
+            <point key="canvasLocation" x="49" y="88"/>
         </scene>
         <!--New Post View Controller-->
         <scene sceneID="HDN-Zx-Ok9">
             <objects>
                 <viewController id="7Jc-cG-Shm" customClass="NewPostViewController" customModule="Finstagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8ZA-BH-U7d" customClass="NewPost">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a10-o0-vwb" userLabel="ImagePreviewView">
-                                <rect key="frame" x="5" y="94" width="404" height="469"/>
+                                <rect key="frame" x="5" y="50" width="404" height="459"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="404" id="Bye-av-vW3"/>
                                 </constraints>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Gql-Dh-eMs" userLabel="CameraRollCollectionView">
-                                <rect key="frame" x="5" y="568" width="404" height="294"/>
+                                <rect key="frame" x="5" y="514" width="404" height="294"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="294" id="f07-ZO-Ity"/>
@@ -115,7 +119,7 @@
                                 </cells>
                             </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="127" translatesAutoresizingMaskIntoConstraints="NO" id="tr6-pc-pIY">
-                                <rect key="frame" x="5" y="44" width="404" height="50"/>
+                                <rect key="frame" x="5" y="0.0" width="404" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jQ-5z-b5r">
                                         <rect key="frame" x="0.0" y="0.0" width="45.5" height="50"/>
@@ -152,6 +156,7 @@
                             <constraint firstItem="l7G-fL-LDO" firstAttribute="trailing" secondItem="a10-o0-vwb" secondAttribute="trailing" constant="5" id="sMI-Ss-see"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="9hx-ew-hjs"/>
                     <connections>
                         <outlet property="cameraRoll" destination="Gql-Dh-eMs" id="R8n-eO-U1J"/>
                         <outlet property="imagePreview" destination="a10-o0-vwb" id="ZiT-h7-aGr"/>
