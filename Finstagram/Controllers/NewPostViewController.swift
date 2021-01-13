@@ -9,6 +9,10 @@ import UIKit
 
 class NewPostViewController: UIViewController {
 
+    
+    @IBOutlet var imagePreview: UIImageView!
+    @IBOutlet var cameraRoll: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

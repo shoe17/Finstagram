@@ -152,6 +152,10 @@
                             <constraint firstItem="l7G-fL-LDO" firstAttribute="trailing" secondItem="a10-o0-vwb" secondAttribute="trailing" constant="5" id="sMI-Ss-see"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cameraRoll" destination="Gql-Dh-eMs" id="R8n-eO-U1J"/>
+                        <outlet property="imagePreview" destination="a10-o0-vwb" id="ZiT-h7-aGr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QgA-kx-51H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
