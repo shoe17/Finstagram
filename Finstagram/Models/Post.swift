@@ -11,4 +11,5 @@ struct Post {
     let username: String
     let subtitle: String
     let profilePic: UIImage
+    let postImage: UIImage
 }

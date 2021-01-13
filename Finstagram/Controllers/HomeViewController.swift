@@ -23,11 +23,5 @@ class HomeViewController: UIViewController {
         postTableView.delegate = postDelegate
         postTableView.register(UINib(nibName: "PostCell", bundle: nil), forCellReuseIdentifier: "PostReusableCell")
     }
-    
 }
 
-extension HomeViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
-    }
-}

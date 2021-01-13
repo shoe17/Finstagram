@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct PostBrain {
+class PostBrain {
     var posts = [
-        Post(username: "darianlow", subtitle: "Hawaii", profilePic: #imageLiteral(resourceName: "profile_pic")),
-        Post(username: "dionlow", subtitle: "Hawaii", profilePic: #imageLiteral(resourceName: "profile_pic")),
-        Post(username: "ericcao", subtitle: "Iowa", profilePic: #imageLiteral(resourceName: "profile_pic")),
+        Post(username: "darianlow", subtitle: "Hawaii", profilePic: #imageLiteral(resourceName: "profile_pic"), postImage: #imageLiteral(resourceName: "profile_pic")),
+        Post(username: "dionlow", subtitle: "Hawaii", profilePic: #imageLiteral(resourceName: "profile_pic"), postImage: #imageLiteral(resourceName: "profile_pic")),
+        Post(username: "ericcao", subtitle: "Iowa", profilePic: #imageLiteral(resourceName: "profile_pic"), postImage: #imageLiteral(resourceName: "profile_pic")),
     ]
     
     func getPosts() -> [Post] {
