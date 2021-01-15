@@ -75,9 +75,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="location" destination="6O7-uf-t6k" id="0Sn-ML-GSC"/>
                 <outlet property="postImage" destination="L8w-Gs-bhO" id="YZt-vD-XW2"/>
                 <outlet property="profileImage" destination="uCM-be-zt0" id="t4C-er-HhC"/>
-                <outlet property="subtitle" destination="6O7-uf-t6k" id="0Sn-ML-GSC"/>
                 <outlet property="username" destination="ne0-fQ-bBa" id="rag-QC-RIP"/>
             </connections>
             <point key="canvasLocation" x="39.855072463768117" y="240.40178571428569"/>

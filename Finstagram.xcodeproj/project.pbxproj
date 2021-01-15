@@ -10,7 +10,6 @@
 		FD0C87D725AD4B22001E9843 /* PostTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0C87D625AD4B22001E9843 /* PostTableViewDataSource.swift */; };
 		FD0C87DA25AD4FE1001E9843 /* PostBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0C87D925AD4FE1001E9843 /* PostBrain.swift */; };
 		FD0C87DD25AD521B001E9843 /* PostTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0C87DC25AD521B001E9843 /* PostTableViewDelegate.swift */; };
-		FD0C87E525AE86E0001E9843 /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0C87E425AE86E0001E9843 /* NewPostViewController.swift */; };
 		FDBB736525A6A60100C61A3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBB736425A6A60100C61A3F /* AppDelegate.swift */; };
 		FDBB736725A6A60100C61A3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBB736625A6A60100C61A3F /* SceneDelegate.swift */; };
 		FDBB736925A6A60100C61A3F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBB736825A6A60100C61A3F /* HomeViewController.swift */; };
@@ -27,7 +26,6 @@
 		FD0C87D625AD4B22001E9843 /* PostTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewDataSource.swift; sourceTree = "<group>"; };
 		FD0C87D925AD4FE1001E9843 /* PostBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostBrain.swift; sourceTree = "<group>"; };
 		FD0C87DC25AD521B001E9843 /* PostTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewDelegate.swift; sourceTree = "<group>"; };
-		FD0C87E425AE86E0001E9843 /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
 		FDBB736125A6A60100C61A3F /* Finstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Finstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDBB736425A6A60100C61A3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDBB736625A6A60100C61A3F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				FDBB736825A6A60100C61A3F /* HomeViewController.swift */,
-				FD0C87E425AE86E0001E9843 /* NewPostViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -66,8 +63,8 @@
 			isa = PBXGroup;
 			children = (
 				FDD7419B25A8F82D0097822F /* Post.swift */,
-				FD0C87D625AD4B22001E9843 /* PostTableViewDataSource.swift */,
 				FD0C87D925AD4FE1001E9843 /* PostBrain.swift */,
+				FD0C87D625AD4B22001E9843 /* PostTableViewDataSource.swift */,
 				FD0C87DC25AD521B001E9843 /* PostTableViewDelegate.swift */,
 			);
 			path = Models;
@@ -195,7 +192,6 @@
 				FD0C87D725AD4B22001E9843 /* PostTableViewDataSource.swift in Sources */,
 				FDBB736725A6A60100C61A3F /* SceneDelegate.swift in Sources */,
 				FDD7418C25A7E7540097822F /* PostCell.swift in Sources */,
-				FD0C87E525AE86E0001E9843 /* NewPostViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

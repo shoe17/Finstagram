@@ -22,7 +22,7 @@ class PostTableViewDataSource: NSObject, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostReusableCell", for: indexPath) as! PostCell
         cell.username.text = posts[indexPath.row].username
-        cell.subtitle.text = posts[indexPath.row].subtitle
+        cell.location.text = posts[indexPath.row].subtitle
         cell.profileImage.image = posts[indexPath.row].profilePic
         
         return cell

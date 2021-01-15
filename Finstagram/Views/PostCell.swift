@@ -12,7 +12,7 @@ class PostCell: UITableViewCell {
     @IBOutlet var profileImage: CircularImageView!
     
     @IBOutlet var username: UILabel!
-    @IBOutlet var subtitle: UILabel!
+    @IBOutlet var location: UILabel!
     @IBOutlet var postImage: UIImageView!
     
 
