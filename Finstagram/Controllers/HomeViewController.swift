@@ -25,23 +25,31 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func newPostPressed(_ sender: UIButton) {
-        let imagePickerController = UIImagePickerController()
-        imagePickerController.sourceType = .photoLibrary
-        imagePickerController.delegate = self
-        imagePickerController.allowsEditing = true
-        present(imagePickerController, animated: true, completion: nil)
+//        let imagePickerController = UIImagePickerController()
+//        imagePickerController.sourceType = .photoLibrary
+//        imagePickerController.delegate = self
+//        imagePickerController.allowsEditing = true
+        let vc = NewPostViewController()
+        present(vc, animated: true, completion: nil)
     }
 }
 
-extension HomeViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        let image = info[UIImagePickerController.InfoKey.editedImage] as! UIImage
-        picker.dismiss(animated: true, completion: nil)
-        
-    }
-    
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        picker.dismiss(animated: true, completion: nil)
-    }
-}
+//extension HomeViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+//        let newPostController: NewPostViewController
+//
+//        if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+//            print("got here")
+//            newPostController = NewPostViewController(with: image)
+//            picker.dismiss(animated: true, completion: nil)
+//            present(newPostController, animated: true, completion: nil)
+//        }
+//        
+//        
+//    }
+//    
+//    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+//        picker.dismiss(animated: true, completion: nil)
+//    }
+//}
 
