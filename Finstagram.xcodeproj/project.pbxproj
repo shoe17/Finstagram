@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FD0C87D725AD4B22001E9843 /* PostTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0C87D625AD4B22001E9843 /* PostTableViewDataSource.swift */; };
 		FD0C87DA25AD4FE1001E9843 /* PostBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0C87D925AD4FE1001E9843 /* PostBrain.swift */; };
-		FD0C87DD25AD521B001E9843 /* PostTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0C87DC25AD521B001E9843 /* PostTableViewDelegate.swift */; };
 		FD8D680C25B12658005D27BC /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8D680B25B12658005D27BC /* NewPostViewController.swift */; };
 		FDBB736525A6A60100C61A3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBB736425A6A60100C61A3F /* AppDelegate.swift */; };
 		FDBB736725A6A60100C61A3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBB736625A6A60100C61A3F /* SceneDelegate.swift */; };
@@ -24,9 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FD0C87D625AD4B22001E9843 /* PostTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewDataSource.swift; sourceTree = "<group>"; };
 		FD0C87D925AD4FE1001E9843 /* PostBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostBrain.swift; sourceTree = "<group>"; };
-		FD0C87DC25AD521B001E9843 /* PostTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewDelegate.swift; sourceTree = "<group>"; };
 		FD8D680B25B12658005D27BC /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
 		FDBB736125A6A60100C61A3F /* Finstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Finstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDBB736425A6A60100C61A3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,8 +63,6 @@
 			children = (
 				FDD7419B25A8F82D0097822F /* Post.swift */,
 				FD0C87D925AD4FE1001E9843 /* PostBrain.swift */,
-				FD0C87D625AD4B22001E9843 /* PostTableViewDataSource.swift */,
-				FD0C87DC25AD521B001E9843 /* PostTableViewDelegate.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -188,11 +182,9 @@
 			files = (
 				FDD7419925A7EB1B0097822F /* CircularImageView.swift in Sources */,
 				FDBB736925A6A60100C61A3F /* HomeViewController.swift in Sources */,
-				FD0C87DD25AD521B001E9843 /* PostTableViewDelegate.swift in Sources */,
 				FDBB736525A6A60100C61A3F /* AppDelegate.swift in Sources */,
 				FDD7419C25A8F82D0097822F /* Post.swift in Sources */,
 				FD0C87DA25AD4FE1001E9843 /* PostBrain.swift in Sources */,
-				FD0C87D725AD4B22001E9843 /* PostTableViewDataSource.swift in Sources */,
 				FDBB736725A6A60100C61A3F /* SceneDelegate.swift in Sources */,
 				FDD7418C25A7E7540097822F /* PostCell.swift in Sources */,
 				FD8D680C25B12658005D27BC /* NewPostViewController.swift in Sources */,

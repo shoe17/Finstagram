@@ -9,47 +9,46 @@ import UIKit
 
 class HomeViewController: UIViewController {
     @IBOutlet var postTableView: UITableView!
-    
     let postBrain = PostBrain()
-    var postDataSource: PostTableViewDataSource!
-    var postDelegate: PostTableViewDelegate!
+    var posts = [Post]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        postDataSource = PostTableViewDataSource(posts: postBrain.getPosts())
-        postDelegate = PostTableViewDelegate()
-        postTableView.dataSource = postDataSource
-        postTableView.delegate = postDelegate
+        posts = postBrain.getPosts()
+        postTableView.dataSource = self
+        postTableView.delegate = self
+        
         postTableView.register(UINib(nibName: "PostCell", bundle: nil), forCellReuseIdentifier: "PostReusableCell")
-    }
-    
-    @IBAction func newPostPressed(_ sender: UIButton) {
-//        let imagePickerController = UIImagePickerController()
-//        imagePickerController.sourceType = .photoLibrary
-//        imagePickerController.delegate = self
-//        imagePickerController.allowsEditing = true
-        let vc = NewPostViewController()
-        present(vc, animated: true, completion: nil)
     }
 }
 
-//extension HomeViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-//        let newPostController: NewPostViewController
-//
-//        if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
-//            print("got here")
-//            newPostController = NewPostViewController(with: image)
-//            picker.dismiss(animated: true, completion: nil)
-//            present(newPostController, animated: true, completion: nil)
-//        }
-//        
-//        
-//    }
-//    
-//    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-//        picker.dismiss(animated: true, completion: nil)
-//    }
-//}
+//MARK: - UITableViewDelegate and UITableViewDataSource
+
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("getting size")
+        print(posts.count)
+        return self.posts.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print("dequeueing")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PostReusableCell", for: indexPath) as! PostCell
+        cell.username.text = posts[indexPath.row].username
+        cell.location.text = posts[indexPath.row].location
+        cell.profileImage.image = posts[indexPath.row].profilePic
+        cell.postImage.image = posts[indexPath.row].postImage
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("touching row")
+        print(indexPath.row)
+    }
+    
+    
+}
 

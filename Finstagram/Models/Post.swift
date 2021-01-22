@@ -9,7 +9,7 @@ import UIKit
 
 struct Post {
     let username: String
-    let subtitle: String
+    let location: String
     let profilePic: UIImage
     let postImage: UIImage
 }
