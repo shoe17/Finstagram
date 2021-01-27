@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		FD0C87DA25AD4FE1001E9843 /* PostBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0C87D925AD4FE1001E9843 /* PostBrain.swift */; };
+		FD8A70C825C2154400C10AD3 /* ThumbnailAndCaptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8A70C625C2154400C10AD3 /* ThumbnailAndCaptionCell.swift */; };
+		FD8A70C925C2154400C10AD3 /* ThumbnailAndCaptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD8A70C725C2154400C10AD3 /* ThumbnailAndCaptionCell.xib */; };
 		FD8D680C25B12658005D27BC /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8D680B25B12658005D27BC /* NewPostViewController.swift */; };
 		FDBB736525A6A60100C61A3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBB736425A6A60100C61A3F /* AppDelegate.swift */; };
 		FDBB736725A6A60100C61A3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBB736625A6A60100C61A3F /* SceneDelegate.swift */; };
@@ -23,6 +25,8 @@
 
 /* Begin PBXFileReference section */
 		FD0C87D925AD4FE1001E9843 /* PostBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostBrain.swift; sourceTree = "<group>"; };
+		FD8A70C625C2154400C10AD3 /* ThumbnailAndCaptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailAndCaptionCell.swift; sourceTree = "<group>"; };
+		FD8A70C725C2154400C10AD3 /* ThumbnailAndCaptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThumbnailAndCaptionCell.xib; sourceTree = "<group>"; };
 		FD8D680B25B12658005D27BC /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
 		FDBB736125A6A60100C61A3F /* Finstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Finstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDBB736425A6A60100C61A3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +78,8 @@
 				FDD7418A25A7E7540097822F /* PostCell.swift */,
 				FDD7418B25A7E7540097822F /* PostCell.xib */,
 				FDD7419825A7EB1B0097822F /* CircularImageView.swift */,
+				FD8A70C625C2154400C10AD3 /* ThumbnailAndCaptionCell.swift */,
+				FD8A70C725C2154400C10AD3 /* ThumbnailAndCaptionCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -169,6 +175,7 @@
 				FDBB737125A6A60300C61A3F /* LaunchScreen.storyboard in Resources */,
 				FDBB736E25A6A60300C61A3F /* Assets.xcassets in Resources */,
 				FDBB736C25A6A60100C61A3F /* Main.storyboard in Resources */,
+				FD8A70C925C2154400C10AD3 /* ThumbnailAndCaptionCell.xib in Resources */,
 				FDD7418D25A7E7540097822F /* PostCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -185,6 +192,7 @@
 				FDBB736525A6A60100C61A3F /* AppDelegate.swift in Sources */,
 				FDD7419C25A8F82D0097822F /* Post.swift in Sources */,
 				FD0C87DA25AD4FE1001E9843 /* PostBrain.swift in Sources */,
+				FD8A70C825C2154400C10AD3 /* ThumbnailAndCaptionCell.swift in Sources */,
 				FDBB736725A6A60100C61A3F /* SceneDelegate.swift in Sources */,
 				FDD7418C25A7E7540097822F /* PostCell.swift in Sources */,
 				FD8D680C25B12658005D27BC /* NewPostViewController.swift in Sources */,

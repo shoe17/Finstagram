@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import PhotosUI
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController{
     @IBOutlet var postTableView: UITableView!
     let postBrain = PostBrain()
     var posts = [Post]()
@@ -28,13 +29,10 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("getting size")
-        print(posts.count)
         return self.posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("dequeueing")
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostReusableCell", for: indexPath) as! PostCell
         cell.username.text = posts[indexPath.row].username
         cell.location.text = posts[indexPath.row].location
@@ -45,10 +43,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("touching row")
         print(indexPath.row)
     }
-    
-    
 }
+
 
