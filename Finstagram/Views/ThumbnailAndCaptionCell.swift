@@ -6,11 +6,17 @@
 //
 
 import UIKit
+import PhotosUI
+
+protocol ThumbnailAndCaptionCellDelegate: class {
+    func didPressButton(_ tag: Int)
+}
 
 class ThumbnailAndCaptionCell: UITableViewCell {
     
     @IBOutlet var thumbnail: UIButton!
     @IBOutlet var caption: UITextView!
+    var thumbnailAndCaptionCellDelegate: ThumbnailAndCaptionCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,7 +24,8 @@ class ThumbnailAndCaptionCell: UITableViewCell {
         let largeConfig = UIImage.SymbolConfiguration(pointSize: 70, weight: .regular, scale: .medium)
         let largePhoto = UIImage(systemName: "photo", withConfiguration: largeConfig)
         thumbnail.setImage(largePhoto, for: .normal)
-        
+        //thumbnail.tintColor = UIColor.lightGray
+        thumbnail.imageView?.contentMode = UIView.ContentMode.scaleAspectFit
         caption.delegate = self
         caption.text = "Write a caption..."
         caption.textColor = UIColor.lightGray
@@ -30,6 +37,9 @@ class ThumbnailAndCaptionCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    @IBAction func thumbnailPressed(_ sender: UIButton) {
+        thumbnailAndCaptionCellDelegate?.didPressButton(sender.tag)
+    }
     
 }
 
@@ -39,7 +49,7 @@ extension ThumbnailAndCaptionCell: UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.textColor == UIColor.lightGray {
                 textView.text = nil
-                textView.textColor = UIColor.black
+                textView.textColor = UIColor.white
             }
     }
     

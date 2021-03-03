@@ -21,10 +21,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="686" height="161"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acx-R4-jWE">
-                                <rect key="frame" x="0.0" y="0.0" width="46" height="161"/>
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="161"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="xjk-D2-bua"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="thumbnailPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="KfR-ue-QMJ"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Wh5-Sw-CP2">
-                                <rect key="frame" x="70" y="0.0" width="616" height="161"/>
+                                <rect key="frame" x="174" y="0.0" width="512" height="161"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <accessibility key="accessibilityConfiguration" hint="Write a caption..."/>
                                 <color key="textColor" systemColor="labelColor"/>
