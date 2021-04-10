@@ -17,17 +17,21 @@
                 <rect key="frame" x="0.0" y="0.0" width="686" height="161"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="zxg-ws-Cgz">
-                        <rect key="frame" x="0.0" y="0.0" width="686" height="161"/>
+                    <stackView opaque="NO" contentMode="scaleAspectFit" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zxg-ws-Cgz">
+                        <rect key="frame" x="10" y="10" width="666" height="141"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acx-R4-jWE">
-                                <rect key="frame" x="0.0" y="0.0" width="170" height="161"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acx-R4-jWE">
+                                <rect key="frame" x="0.0" y="0.0" width="80" height="141"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="125" id="51v-sg-ez5"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="125" id="cHz-WB-zx0"/>
+                                </constraints>
                                 <connections>
                                     <action selector="thumbnailPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="KfR-ue-QMJ"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Wh5-Sw-CP2">
-                                <rect key="frame" x="194" y="0.0" width="492" height="161"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Wh5-Sw-CP2">
+                                <rect key="frame" x="90" y="0.0" width="576" height="141"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <accessibility key="accessibilityConfiguration" hint="Write a caption..."/>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -38,10 +42,10 @@
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="zxg-ws-Cgz" secondAttribute="trailing" id="CXP-NL-jIs"/>
-                    <constraint firstItem="zxg-ws-Cgz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="L5p-kK-Ftb"/>
-                    <constraint firstItem="zxg-ws-Cgz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="csG-95-IDu"/>
-                    <constraint firstAttribute="bottom" secondItem="zxg-ws-Cgz" secondAttribute="bottom" id="lh0-je-Tfs"/>
+                    <constraint firstAttribute="trailing" secondItem="zxg-ws-Cgz" secondAttribute="trailing" constant="10" id="CXP-NL-jIs"/>
+                    <constraint firstItem="zxg-ws-Cgz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="L5p-kK-Ftb"/>
+                    <constraint firstItem="zxg-ws-Cgz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="csG-95-IDu"/>
+                    <constraint firstAttribute="bottom" secondItem="zxg-ws-Cgz" secondAttribute="bottom" constant="10" id="lh0-je-Tfs"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

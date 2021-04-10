@@ -3,14 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB486AFF58E2E40573EA7FE1 /* Pods_Finstagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CDE7E8675154F1BD64B44F7 /* Pods_Finstagram.framework */; };
 		FD0C87DA25AD4FE1001E9843 /* PostBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0C87D925AD4FE1001E9843 /* PostBrain.swift */; };
 		FD8A70C825C2154400C10AD3 /* ThumbnailAndCaptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8A70C625C2154400C10AD3 /* ThumbnailAndCaptionCell.swift */; };
 		FD8A70C925C2154400C10AD3 /* ThumbnailAndCaptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD8A70C725C2154400C10AD3 /* ThumbnailAndCaptionCell.xib */; };
 		FD8D680C25B12658005D27BC /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8D680B25B12658005D27BC /* NewPostViewController.swift */; };
+		FDB89E24261F6541006ED32E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FDB89E23261F6541006ED32E /* GoogleService-Info.plist */; };
 		FDBB736525A6A60100C61A3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBB736425A6A60100C61A3F /* AppDelegate.swift */; };
 		FDBB736725A6A60100C61A3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBB736625A6A60100C61A3F /* SceneDelegate.swift */; };
 		FDBB736925A6A60100C61A3F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBB736825A6A60100C61A3F /* HomeViewController.swift */; };
@@ -24,10 +26,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4CDE7E8675154F1BD64B44F7 /* Pods_Finstagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Finstagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E00CAF4AE907CACABC6DAFA3 /* Pods-Finstagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Finstagram.release.xcconfig"; path = "Target Support Files/Pods-Finstagram/Pods-Finstagram.release.xcconfig"; sourceTree = "<group>"; };
+		F220C5C5205BBF8767B1B4CA /* Pods-Finstagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Finstagram.debug.xcconfig"; path = "Target Support Files/Pods-Finstagram/Pods-Finstagram.debug.xcconfig"; sourceTree = "<group>"; };
 		FD0C87D925AD4FE1001E9843 /* PostBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostBrain.swift; sourceTree = "<group>"; };
 		FD8A70C625C2154400C10AD3 /* ThumbnailAndCaptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailAndCaptionCell.swift; sourceTree = "<group>"; };
 		FD8A70C725C2154400C10AD3 /* ThumbnailAndCaptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThumbnailAndCaptionCell.xib; sourceTree = "<group>"; };
 		FD8D680B25B12658005D27BC /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
+		FDB89E23261F6541006ED32E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FDBB736125A6A60100C61A3F /* Finstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Finstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDBB736425A6A60100C61A3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDBB736625A6A60100C61A3F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,12 +53,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB486AFF58E2E40573EA7FE1 /* Pods_Finstagram.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08AD11EB5E305A0A42740C4F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F220C5C5205BBF8767B1B4CA /* Pods-Finstagram.debug.xcconfig */,
+				E00CAF4AE907CACABC6DAFA3 /* Pods-Finstagram.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A82BCE455E4A9E4D87A97A65 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CDE7E8675154F1BD64B44F7 /* Pods_Finstagram.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FDB2447C25A7D67900B98FE6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +113,8 @@
 			children = (
 				FDBB736325A6A60100C61A3F /* Finstagram */,
 				FDBB736225A6A60100C61A3F /* Products */,
+				08AD11EB5E305A0A42740C4F /* Pods */,
+				A82BCE455E4A9E4D87A97A65 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +137,7 @@
 				FDBB736D25A6A60300C61A3F /* Assets.xcassets */,
 				FDBB736F25A6A60300C61A3F /* LaunchScreen.storyboard */,
 				FDBB737225A6A60300C61A3F /* Info.plist */,
+				FDB89E23261F6541006ED32E /* GoogleService-Info.plist */,
 			);
 			path = Finstagram;
 			sourceTree = "<group>";
@@ -122,9 +149,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDBB737525A6A60300C61A3F /* Build configuration list for PBXNativeTarget "Finstagram" */;
 			buildPhases = (
+				0DBD1D89E12DE3BF635C7382 /* [CP] Check Pods Manifest.lock */,
 				FDBB735D25A6A60100C61A3F /* Sources */,
 				FDBB735E25A6A60100C61A3F /* Frameworks */,
 				FDBB735F25A6A60100C61A3F /* Resources */,
+				ED0F50D83654BD3722BC5523 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -177,10 +206,53 @@
 				FDBB736C25A6A60100C61A3F /* Main.storyboard in Resources */,
 				FD8A70C925C2154400C10AD3 /* ThumbnailAndCaptionCell.xib in Resources */,
 				FDD7418D25A7E7540097822F /* PostCell.xib in Resources */,
+				FDB89E24261F6541006ED32E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0DBD1D89E12DE3BF635C7382 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Finstagram-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED0F50D83654BD3722BC5523 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Finstagram/Pods-Finstagram-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Finstagram/Pods-Finstagram-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Finstagram/Pods-Finstagram-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FDBB735D25A6A60100C61A3F /* Sources */ = {
@@ -339,6 +411,7 @@
 		};
 		FDBB737625A6A60300C61A3F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F220C5C5205BBF8767B1B4CA /* Pods-Finstagram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -358,6 +431,7 @@
 		};
 		FDBB737725A6A60300C61A3F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E00CAF4AE907CACABC6DAFA3 /* Pods-Finstagram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
