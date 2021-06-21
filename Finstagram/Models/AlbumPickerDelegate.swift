@@ -17,5 +17,4 @@ class AlbumPickerDelegate: NSObject, UIPickerViewDelegate {
         self.delegate?.selectedRow(row: row)
     }
     
-    
 }

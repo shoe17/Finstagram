@@ -23,9 +23,6 @@ class AlbumPickerDataSource: NSObject, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        let row = data[row]
-        return row
+        return data[row]
     }
-    
-    
 }

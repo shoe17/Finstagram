@@ -94,25 +94,19 @@ extension HomeViewController: UINavigationControllerDelegate, UIImagePickerContr
 
         picker.dismiss(animated: true, completion: {
             if let albumPicker = self.storyboard?.instantiateViewController(identifier: "AlbumPickerID") as? AlbumPickerViewController {
+                guard let imageToAdd = info[.editedImage] as? UIImage else {
+                    print("No image found")
+                    return
+                }
+                
+                albumPicker.image = imageToAdd
                 self.present(albumPicker, animated: true, completion: nil)
             }
             
             
-            
-            guard let image = info[.editedImage] as? UIImage else {
-                print("No image found")
-                return
-            }
-            
             // save image to selected album
-            self.saveToAlbum(named: "test", image: image)
+            //self.saveToAlbum(named: "test", image: imageToAdd)
         })
-
-        
-        //UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
-        
-        //present uipicker
-        
     }
     
     @objc func image(_ image: UIImage, didFinishSavingWithError err: Error?, contextInfo: UnsafeRawPointer) {
@@ -208,11 +202,6 @@ extension HomeViewController: UINavigationControllerDelegate, UIImagePickerContr
         vc.allowsEditing = true
         vc.delegate = self
         present(vc, animated: true)
-    }
-    
-    func presentAlbumPicker() {
-        let albumPicker = AlbumPickerViewController()
-        self.present(albumPicker, animated: true, completion: nil)
     }
 }
 
