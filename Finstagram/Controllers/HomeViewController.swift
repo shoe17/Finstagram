@@ -8,7 +8,10 @@
 import UIKit
 import PhotosUI
 
-class HomeViewController: UIViewController{
+
+
+class HomeViewController: UIViewController {
+    
     @IBOutlet var postTableView: UITableView!
     let postBrain = PostBrain()
     var posts = [Post]()
@@ -31,7 +34,7 @@ class HomeViewController: UIViewController{
     private let animationDuration: CFTimeInterval = 0.4
     private let animateFromValue: CGFloat = 1.00
     private let animateToValue: CGFloat = 1.05
-    
+        
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         createFloatingButton()
@@ -45,6 +48,7 @@ class HomeViewController: UIViewController{
         postTableView.delegate = self
         
         postTableView.register(UINib(nibName: "PostCell", bundle: nil), forCellReuseIdentifier: "PostReusableCell")
+        
     }
     
     public override func viewWillDisappear(_ animated: Bool) {
@@ -85,19 +89,30 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 //MARK: - UINavigationControllerDelegate and UIImgePickerControllerDelegate
 
 extension HomeViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        picker.dismiss(animated: true)
 
-        guard let image = info[.editedImage] as? UIImage else {
-            print("No image found")
-            return
-        }
+        picker.dismiss(animated: true, completion: {
+            if let albumPicker = self.storyboard?.instantiateViewController(identifier: "AlbumPickerID") as? AlbumPickerViewController {
+                self.present(albumPicker, animated: true, completion: nil)
+            }
+            
+            
+            
+            guard let image = info[.editedImage] as? UIImage else {
+                print("No image found")
+                return
+            }
+            
+            // save image to selected album
+            self.saveToAlbum(named: "test", image: image)
+        })
 
-        // print out the image size as a test
-        print(image.size)
-        saveToAlbum(named: "test", image: image)
+        
         //UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+        
+        //present uipicker
+        
     }
     
     @objc func image(_ image: UIImage, didFinishSavingWithError err: Error?, contextInfo: UnsafeRawPointer) {
@@ -194,6 +209,12 @@ extension HomeViewController: UINavigationControllerDelegate, UIImagePickerContr
         vc.delegate = self
         present(vc, animated: true)
     }
+    
+    func presentAlbumPicker() {
+        let albumPicker = AlbumPickerViewController()
+        self.present(albumPicker, animated: true, completion: nil)
+    }
 }
+
 
 

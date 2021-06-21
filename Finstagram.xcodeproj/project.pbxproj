@@ -12,6 +12,9 @@
 		FD8A70C825C2154400C10AD3 /* ThumbnailAndCaptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8A70C625C2154400C10AD3 /* ThumbnailAndCaptionCell.swift */; };
 		FD8A70C925C2154400C10AD3 /* ThumbnailAndCaptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD8A70C725C2154400C10AD3 /* ThumbnailAndCaptionCell.xib */; };
 		FD8D680C25B12658005D27BC /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8D680B25B12658005D27BC /* NewPostViewController.swift */; };
+		FDB4E20026801D55004CAC38 /* AlbumPickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4E1FF26801D55004CAC38 /* AlbumPickerDelegate.swift */; };
+		FDB4E20326801DB0004CAC38 /* AlbumPickerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4E20226801DB0004CAC38 /* AlbumPickerDataSource.swift */; };
+		FDB4E2062680207D004CAC38 /* AlbumPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4E2052680207D004CAC38 /* AlbumPickerViewController.swift */; };
 		FDB89E24261F6541006ED32E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FDB89E23261F6541006ED32E /* GoogleService-Info.plist */; };
 		FDBB736525A6A60100C61A3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBB736425A6A60100C61A3F /* AppDelegate.swift */; };
 		FDBB736725A6A60100C61A3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBB736625A6A60100C61A3F /* SceneDelegate.swift */; };
@@ -35,6 +38,9 @@
 		FD8A70C625C2154400C10AD3 /* ThumbnailAndCaptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailAndCaptionCell.swift; sourceTree = "<group>"; };
 		FD8A70C725C2154400C10AD3 /* ThumbnailAndCaptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThumbnailAndCaptionCell.xib; sourceTree = "<group>"; };
 		FD8D680B25B12658005D27BC /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
+		FDB4E1FF26801D55004CAC38 /* AlbumPickerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPickerDelegate.swift; sourceTree = "<group>"; };
+		FDB4E20226801DB0004CAC38 /* AlbumPickerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPickerDataSource.swift; sourceTree = "<group>"; };
+		FDB4E2052680207D004CAC38 /* AlbumPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPickerViewController.swift; sourceTree = "<group>"; };
 		FDB89E23261F6541006ED32E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FDBB736125A6A60100C61A3F /* Finstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Finstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDBB736425A6A60100C61A3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +92,7 @@
 			children = (
 				FDBB736825A6A60100C61A3F /* HomeViewController.swift */,
 				FD8D680B25B12658005D27BC /* NewPostViewController.swift */,
+				FDB4E2052680207D004CAC38 /* AlbumPickerViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -97,6 +104,8 @@
 				FD0C87D925AD4FE1001E9843 /* PostBrain.swift */,
 				FDED906C265F28DA008E718A /* CustomAlbum.swift */,
 				FDED906F265F295F008E718A /* Error+.swift */,
+				FDB4E1FF26801D55004CAC38 /* AlbumPickerDelegate.swift */,
+				FDB4E20226801DB0004CAC38 /* AlbumPickerDataSource.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -267,10 +276,13 @@
 			files = (
 				FDD7419925A7EB1B0097822F /* CircularImageView.swift in Sources */,
 				FDBB736925A6A60100C61A3F /* HomeViewController.swift in Sources */,
+				FDB4E20026801D55004CAC38 /* AlbumPickerDelegate.swift in Sources */,
 				FDED906D265F28DA008E718A /* CustomAlbum.swift in Sources */,
+				FDB4E20326801DB0004CAC38 /* AlbumPickerDataSource.swift in Sources */,
 				FDED9070265F295F008E718A /* Error+.swift in Sources */,
 				FDBB736525A6A60100C61A3F /* AppDelegate.swift in Sources */,
 				FDD7419C25A8F82D0097822F /* Post.swift in Sources */,
+				FDB4E2062680207D004CAC38 /* AlbumPickerViewController.swift in Sources */,
 				FD0C87DA25AD4FE1001E9843 /* PostBrain.swift in Sources */,
 				FD8A70C825C2154400C10AD3 /* ThumbnailAndCaptionCell.swift in Sources */,
 				FDBB736725A6A60100C61A3F /* SceneDelegate.swift in Sources */,
