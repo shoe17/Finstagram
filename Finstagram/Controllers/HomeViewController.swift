@@ -17,7 +17,6 @@ class HomeViewController: UIViewController {
     var posts = [Post]()
     
     //variables for floating button
-    let activityIndicator = UIActivityIndicatorView(style: .gray)
 
     private var floatingButton: UIButton?
     private let floatingButtonImageName = "NAME OF YOUR IMAGE"
@@ -109,37 +108,8 @@ extension HomeViewController: UINavigationControllerDelegate, UIImagePickerContr
         })
     }
     
-    @objc func image(_ image: UIImage, didFinishSavingWithError err: Error?, contextInfo: UnsafeRawPointer) {
-        activityIndicator.stopAnimating()
-        if let err = err {
-            // we got back an error!
-            presentAlert(title: "Error", message: err.localizedDescription)
-        } else {
-            presentAlert(title: "Saved!", message: "Image saved successfully")
-        }
-    }
     
-    func presentAlert(title: String, message: String) {
-        DispatchQueue.main.async {
-            self.activityIndicator.stopAnimating()
-            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default))
-            self.present(alert, animated: true)
-        }
-        
-    }
     
-    func saveToAlbum(named: String, image: UIImage) {
-        let album = CustomAlbum(name: named)
-        album.save(image: image) { (result) in
-            switch result {
-            case .success(_):
-                self.presentAlert(title: "Success", message: "Successfully save photo to album \"\(named)\"")
-            case .failure(let err):
-                self.presentAlert(title: "Error", message: err.localizedDescription)
-            }
-        }
-    }
     
     private func createFloatingButton() {
         floatingButton = UIButton(type: .custom)

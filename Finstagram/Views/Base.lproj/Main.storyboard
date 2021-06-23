@@ -78,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="957.97101449275374" y="87.053571428571431"/>
+            <point key="canvasLocation" x="955" y="88"/>
         </scene>
         <!--New Post-->
         <scene sceneID="s6q-qx-5aQ">
@@ -179,17 +179,31 @@
                                 <rect key="frame" x="0.0" y="392" width="414" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jtC-Zn-HDq">
+                                <rect key="frame" x="-8" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Select Album" id="aiZ-x5-ddi">
+                                        <barButtonItem key="rightBarButtonItem" title="Done" id="WNs-yO-aQZ">
+                                            <connections>
+                                                <action selector="doneButonPressed:" destination="sID-5f-c2t" id="oYy-XM-V4y"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="koc-Y8-jUV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
                         <outlet property="albumPicker" destination="pH7-nu-biZ" id="bfw-0b-Svs"/>
+                        <outlet property="doneButton" destination="WNs-yO-aQZ" id="pT8-Sv-E2q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WgV-V9-okl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2773" y="83"/>
+            <point key="canvasLocation" x="2691" y="87"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NEM-ul-q3O">

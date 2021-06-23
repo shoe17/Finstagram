@@ -21,6 +21,11 @@ class AlbumPickerViewController: UIViewController, PickerViewControllerDelegate,
     var albumPickerDataSource: AlbumPickerDataSource!
     var albumPickerDelegate: AlbumPickerDelegate!
     var image: UIImage?
+    var alubmName: String?
+    
+    let activityIndicator = UIActivityIndicatorView(style: .gray)
+
+    @IBOutlet var doneButton: UIBarButtonItem!
     
     let data: [String] = ["Grocery", "Todo", "Maintenance", "Outside", "Other"]
     
@@ -52,7 +57,9 @@ class AlbumPickerViewController: UIViewController, PickerViewControllerDelegate,
         //self.albumPicker.dataSource = self.albumPickerDataSource
         albumPicker.delegate = self
         albumPicker.dataSource = self
+        
     }
+    
     
     func selectedRow(row: Int) {
         
@@ -70,6 +77,52 @@ class AlbumPickerViewController: UIViewController, PickerViewControllerDelegate,
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return data[row]
     }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        alubmName = data[row]
+    }
+    
+    @IBAction func doneButonPressed(_ sender: UIBarButtonItem) {
+        if let albumName = alubmName, let image = image {
+            saveToAlbum(named: albumName, image: image)
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func presentAlert(title: String, message: String) {
+        DispatchQueue.main.async {
+            self.activityIndicator.stopAnimating()
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alert, animated: true)
+        }
+        
+    }
+    
+    func saveToAlbum(named: String, image: UIImage) {
+        let album = CustomAlbum(name: named)
+        album.save(image: image) { (result) in
+            switch result {
+            case .success(_):
+                //self.presentAlert(title: "Success", message: "Successfully save photo to album \"\(named)\"")
+                return
+            case .failure(let err):
+                //self.presentAlert(title: "Error", message: err.localizedDescription)
+                return
+            }
+        }
+    }
+    
+    @objc func image(_ image: UIImage, didFinishSavingWithError err: Error?, contextInfo: UnsafeRawPointer) {
+        activityIndicator.stopAnimating()
+        if let err = err {
+            // we got back an error!
+            presentAlert(title: "Error", message: err.localizedDescription)
+        } else {
+            presentAlert(title: "Saved!", message: "Image saved successfully")
+        }
+    }
+    
 
     /*
     // MARK: - Navigation
